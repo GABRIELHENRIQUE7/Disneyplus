@@ -1,0 +1,443 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Roboto+Condensed:wght@300;700&display=swap');
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    position: relative;
+    border: none;
+}
+
+html, body{
+    height: 100%;
+}
+
+body{
+    background-color: #162336;
+    color: #8d96a7;
+    font-family:'Roboto Condensed', Calibri, Arial, sans-serif;
+    font-size: 0.96rem;
+    font-weight: 300;
+    
+}
+
+.bg{
+    background: url(imagens/bg.jpg) no-repeat center;
+    background-size: cover;
+    height: 100%;
+}
+
+header{
+    background: rgba(255,255,255,0.06);
+    border-radius: 0 0 10px 10px;
+    border-bottom: rgba(255,255,255,0.08) solid 1px;
+    margin: 0 7px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: absolute;
+    z-index: 3;
+    width: calc(100% - 14px);
+}
+
+.logo{
+    font-family: 'Koulen', 'Roboto Condensed';
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: inline-block;
+    padding: 6px 15px;
+}
+
+#chk-toggle{
+    display: none;    
+}
+
+#toggle{
+    display: inline-block;
+    padding: 11px;
+}
+
+#toggle span{
+    display: block;
+    width: 22px;
+    height: 3px;
+    background: #8d96a7;
+    margin: 2px;
+}
+
+nav{
+    flex-basis: 100%;
+    height: 0;
+    overflow: hidden;
+}
+
+nav ul{
+    margin: 0 15px;
+    list-style: none;
+}
+
+nav ul li {
+  border-bottom: rgba(255, 255, 255, 0.06) solid 1px;
+}
+
+nav ul li:nth-last-child(1){
+    border-bottom: none;
+}
+
+nav a{
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    align-items: center;
+    text-align: center;
+    font-size: 0.98rem;
+    padding: 8px;
+}
+
+#chk-toggle:checked ~ nav{
+    height: auto;
+}
+
+.headline{
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    margin: 0 15px;
+    flex-direction: column;
+}
+
+h1{
+    font-family: 'Koulen', 'Roboto Condensed';
+    color: white;
+    font-size: 4rem;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.26);
+    line-height: 3.3rem;
+}
+
+h1 span{
+    color: black;
+    display: block;
+}
+
+.btn{
+    font-family: 'Koulen', 'Roboto Condensed';
+    text-decoration: none;
+    background-color: black;
+    border: black solid 2px;
+    color: white;
+    padding: 5px 24px;
+    margin: 4px;
+    font-size: 0.9rem;
+}
+
+.btnclean{
+    font-family: 'Koulen', 'Roboto Condensed';
+    text-decoration: none;
+    color: white;
+    padding: 5px 24px;
+    margin: 4px;
+    font-size: 0.9rem;
+    border: white solid 2px;
+    background: transparent;
+}
+
+.ladolado{
+    display: flex;
+    margin: 0 -3;
+}
+
+.degrade{
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#162336+0,162336+100&0+0,1+100,1+100 */
+    background: -moz-linear-gradient(top,  rgba(22,35,54,0) 0%, rgba(22,35,54,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(22,35,54,0) 0%,rgba(22,35,54,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(22,35,54,0) 0%,rgba(22,35,54,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00162336', endColorstr='#162336',GradientType=0 ); /* IE6-9 */
+
+    display: block;
+    height: 30%;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+
+}
+
+h2{
+    font-family: 'Roboto Condensed', Calibri, Arial;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: white;
+    text-transform: uppercase;
+}
+
+section{
+    margin: 0 15px 30px 15px;
+    clear: both;
+    padding-top: 30px;
+}
+
+.esq{float: left;}
+
+.margdir{margin-right: 13px; margin-bottom: 8px;}
+
+.w43{width: 43%;}
+
+.video{
+    white-space: nowrap;
+    width: calc(100% + 15px);
+    display: block;
+    overflow-y: auto;
+}
+
+.video ul {
+    list-style: none;
+    margin-bottom: 10px;
+    font-size: 0;
+
+}
+.video ul li{
+    display: inline-block;
+    width: 75%;
+    padding: 5px;
+}
+
+.video ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video ul li img{
+    width: 100%;
+    height: auto;
+    z-index: 0;
+}
+
+.bgplay{
+    z-index: 1;
+    display: block;
+    position: absolute;
+}
+
+.play{
+    border: solid 3px white;
+    width: 48px;
+    height: 48px;
+    z-index: 1;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.07); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}   
+
+.play span{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+    display: block;
+    margin-left: 2px;
+}
+
+.boxass{
+    background: rgba(255, 255, 255, 0.08);
+    border-bottom: rgba(255, 255, 255, 0.08) solid 1px;
+    border-right: rgba(255, 255, 255, 0.08) solid 1px;
+    border-top: rgba(0, 0, 0, 0.05) solid 1px;
+    border-left: rgba(0, 0, 0, 0.05) solid 1px;
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.ass, .prc, .vnt{
+    display: block;
+    color: white;
+    text-transform: uppercase;
+}
+
+.ass{
+    font-size: 1rem;
+}
+
+.prc{
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.vnt{
+    font-size: 0.8rem;
+    padding: 0.25%;
+}
+
+footer{
+    background: #111a29;
+    padding: 40px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.REDES{
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+    margin-bottom: 25px;
+}
+
+.REDES a{
+    display: flex;
+    background: white;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    margin: 5px ;
+    font-size: 1.2rem;
+    color: #162336;
+}
+
+.copy{
+    color: rgba(255, 255, 255, 0.050);
+}
+
+.disney{
+    max-width: 259px;
+    width: 90%;
+}
+
+@media only screen and (min-width: 600px){
+    .video ul li{
+        width: 50%;
+    }
+
+}
+@media only screen and (min-width: 500px){
+    .video ul li{
+        width: 60%;
+}
+}
+@media only screen and (min-width: 600px){
+    .video{
+        white-space: normal;
+        width: 100%;
+    }
+    .video ul li{
+          width: 50%;
+    }
+
+    h1{
+        font-size: 5rem;
+        line-height: 4.3rem;
+    }
+
+      .btn{
+        font-size: 1rem;
+      }
+
+}
+@media only screen and (min-width: 700px){
+      nav{
+        height: auto;
+        overflow-y: unset;
+        flex-basis: unset;
+      }
+      
+     #toggle{
+        display: none;
+
+     }
+     nav ul li {
+        display: inline-block;
+        border: none;
+     }
+
+     nav a {
+        padding: 8px 12px;
+     }
+
+
+}
+
+@media only screen and (min-width: 850px){
+    
+    .secvideo{
+        display: flex;
+        float: left;
+    }
+    
+    .space{
+        width: 64%;
+        float: right;
+    }
+    .boxass{
+        width: 35%;
+    }
+
+    .clear{
+        clear: both;
+    }
+    h1{
+        font-size: 7rem;
+        line-height: 5.5rem;
+    }
+
+      .btn{
+        font-size: 1.82rem;
+      }
+      .btnclean{
+        font-size: 1.82rem;
+      }
+}
+
+@media only screen and (min-width: 1200px){
+    section, .centraliza{
+        margin: 0 auto;
+        max-width: 1000px;
+    }
+
+    header{
+        padding: 8px;
+        border-radius: 0 0 17px 17px;
+    }
+
+     h1{
+        margin-bottom: 36px;
+
+    }    
+    .w43{
+        width: 32%;
+    }
+
+    .video{
+        overflow-y: unset;
+    }
+     
+    .video ul li {
+        padding: 20px;
+    }
+
+    .video ul {
+        margin: -15px;
+    }
+    
+    .boxass{
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+     }
+ }
+
+ html{
+    scroll-behavior: smooth;
+ }
+
